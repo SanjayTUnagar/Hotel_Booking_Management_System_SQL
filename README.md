@@ -8,8 +8,10 @@
  <img src="https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge">
   <img src="https://img.shields.io/badge/Project-SQL-orange?style=for-the-badge">
 </p>
-
-## 📌 Project Overview
+<br clear="both">
+<div align="center">
+<h2>📌 Project Overview</h2>
+</div> 
 
 The **Hotel Booking Management System** is a SQL-based database project designed to automate hotel operations such as customer registration, room booking, check-in/check-out, payment processing, and business reporting.
 
