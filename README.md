@@ -83,7 +83,7 @@ This project demonstrates practical SQL concepts used in real-world database app
 
 The following SQL script creates the **Hotel_DB** database.
 
-### 🗄️ Check if the database already exists**
+### 🎯 Check if the database already exists..
 
 ```sql
 IF DB_ID('Hotel_DB') IS NOT NULL
@@ -93,7 +93,7 @@ END;
 GO
 ```
 
-### 🆕 Create Database**
+### 🆕 Create Database
 
 ```sql
 CREATE DATABASE Hotel_DB;
