@@ -1,4 +1,4 @@
-<p align="Center">
+<p align="center">
 <h1>  🏨 Hotel Booking Management System – SQL Project</h1>
 </p>
 
