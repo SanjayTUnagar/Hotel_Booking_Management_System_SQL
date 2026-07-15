@@ -104,6 +104,67 @@ GO
 ```
 > ✅ **Result:** The `Hotel_DB` database is successfully created and ready for the next step.
 
+</div>
+
+
+
+<div>
+  <h2>🗄️ Step 2: Create Table</h2>
+
+The following SQL script creates the **tbl_Employee** table.
+
+```sql
+USE [Hotel_DB]
+GO
+
+/****** Object:  Table [dbo].[tbl_Employee]    Script Date: 16-07-2026 03:05:59 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_Employee](
+	[EmployeeID] [int] IDENTITY(1,1) NOT NULL,
+	[EmployeeCode] [varchar](10) NULL,
+	[EmployeeName] [varchar](50) NULL,
+	[Gender] [varchar](50) NULL,
+	[DOB] [date] NULL,
+	[EmailID] [varchar](50) NULL,
+	[MobileNo] [varchar](10) NULL,
+	[Address] [varchar](500) NULL,
+	[City] [varchar](50) NULL,
+	[State] [varchar](50) NULL,
+	[Graduation] [varchar](50) NULL,
+	[PostGraduation] [varchar](50) NULL,
+	[Designation] [varchar](50) NULL,
+	[JoiningDate] [date] NULL,
+	[LeavingDate] [date] NULL,
+	[PanNo] [varchar](12) NULL,
+	[AadharNo] [varchar](15) NULL,
+	[Salary] [int] NULL,
+	[Status] [varchar](50) NULL,
+	[EntryDate] [date] NULL,
+	[EntryBy] [varchar](50) NULL,
+ CONSTRAINT [PK_tbl_Employee] PRIMARY KEY CLUSTERED 
+(
+	[EmployeeID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+### 🆕 Create Database
+
+```sql
+CREATE DATABASE Hotel_DB;
+GO
+
+USE Hotel_DB;
+GO
+```
+> ✅ **Result:** The `Hotel_DB` database is successfully created and ready for the next step.
+
 
   
 </div>
