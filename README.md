@@ -76,8 +76,10 @@ This project demonstrates practical SQL concepts used in real-world database app
 
 <br clear="both">
 
+
+
 <div>
-  <h2>🗄️ Create Database</h2>
+  <h2>🗄️ Step 1: Create Database</h2>
 
 The following SQL script creates the **Hotel_DB** database.
 
