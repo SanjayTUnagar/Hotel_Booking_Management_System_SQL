@@ -74,6 +74,17 @@ This project demonstrates practical SQL concepts used in real-world database app
   </tr>
 </table>
 
+<div align="center">
+/*===========================================================
+ Project      : Hotel Booking Management System
+ File         : 01_Create_Database.sql
+ Database     : Hotel_DB
+ Author       : Sanjay Unagar
+ Description  : Create Hotel Booking Management Database
+===========================================================*/
+  
+</div>
+
 
 
 
