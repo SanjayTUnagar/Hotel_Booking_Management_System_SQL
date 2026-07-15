@@ -107,7 +107,7 @@ GO
 </div>
 
 
-
+<br clear="both">
 <div>
   <h2>🗄️ Step 2: Create Table</h2>
 
@@ -154,14 +154,10 @@ CREATE TABLE [dbo].[tbl_Employee](
 GO
 
 
-### 🆕 Create Database
+### 🆕 Check table is created or not. 
 
 ```sql
-CREATE DATABASE Hotel_DB;
-GO
-
-USE Hotel_DB;
-GO
+select * from tbl_Employee
 ```
 > ✅ **Result:** The `Hotel_DB` database is successfully created and ready for the next step.
 
