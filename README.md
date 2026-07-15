@@ -1,4 +1,4 @@
-<div align="center">
+<div>
 <h1>  🏨 Hotel Booking Management System – SQL Project</h1>
 </div>
 
@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/Project-SQL-orange?style=for-the-badge">
 </p>
 <br clear="both">
-<div align="center">
+<div>
 <h2>📌 Project Overview</h2>
  
 The **Hotel Booking Management System** is a SQL-based database project designed to automate hotel operations such as customer registration, room booking, check-in/check-out, payment processing, and business reporting.
@@ -19,7 +19,7 @@ This project demonstrates practical SQL concepts used in real-world database app
 
 <br clear="both">
 
-<div align="center">
+<div>
 <h2>🎯 Objectives</h2>
 </div>
 <table align="center" width="100%">
@@ -46,7 +46,7 @@ This project demonstrates practical SQL concepts used in real-world database app
 
 
 <br clear="both">
-<div align="center">
+<div>
 <h2>🛠️ Technologies Used</h2>
 </div>
 <table align="center">
