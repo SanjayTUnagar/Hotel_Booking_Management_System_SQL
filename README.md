@@ -13,11 +13,10 @@ The **Hotel Booking Management System** is a SQL-based database project designed
 
 This project demonstrates practical SQL concepts used in real-world database applications.
 
+## 🎯 Objectives
 
-<table>
-  <tr>
-    <th align="left"> ## 🎯 Objectives</th>
-  </tr>
+<table align="center">
+
   <tr>
     <td valign="top">
       <ul>
