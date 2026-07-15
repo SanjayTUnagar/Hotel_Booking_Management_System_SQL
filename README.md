@@ -185,7 +185,7 @@ VALUES
 > ✅ **Result:** The `tbl_Employee` table data is inserted successfully ready for the next step.
 
 
-### 🆕 Verify Table Creation 
+### 🆕 Verify Table Creation  
 
 ```sql
 
