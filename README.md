@@ -1,6 +1,6 @@
-<p align="center">
+<div align="center">
 <h1>  🏨 Hotel Booking Management System – SQL Project</h1>
-</p>
+</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/SQL_Server-Database-red?style=for-the-badge&logo=microsoftsqlserver&logoColor=white">
