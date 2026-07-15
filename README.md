@@ -81,6 +81,7 @@ This project demonstrates practical SQL concepts used in real-world database app
 
 The following SQL script creates the **Hotel_DB** database.
 
+```sql
 **Check if the database already exists** 
 
 IF DB_ID('Hotel_DB') IS NOT NULL
@@ -91,7 +92,7 @@ GO
 
 **Create Database**
 
-```sql
+
 CREATE DATABASE Hotel_DB;
 GO
 
