@@ -75,14 +75,19 @@ This project demonstrates practical SQL concepts used in real-world database app
 </table>
 
 <div align="center">
+## 🗄️ Create Database
+
+The following SQL script creates the **Hotel_DB** database.
+
 ```sql
-/*===========================================================
- Project      : Hotel Booking Management System
- File         : 01_Create_Database.sql
- Database     : Hotel_DB
- Author       : Sanjay Unagar
- Description  : Create Hotel Booking Management Database
-===========================================================*/
+CREATE DATABASE Hotel_DB;
+GO
+
+USE Hotel_DB;
+GO
+```
+
+📂 **Full Script:** [`Database/01_Create_Database.sql`](Database/01_Create_Database.sql)
   
 </div>
 
