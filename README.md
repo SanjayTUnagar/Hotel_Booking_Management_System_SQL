@@ -25,7 +25,7 @@ This project demonstrates practical SQL concepts used in real-world database app
 <table align="center">
 
   <tr>
-    <td valign="top" width="50">
+    <td valign="top" width="150">
       <ul>
         <li>Manage hotel room bookings</li>
         <li>Store customer information</li>
@@ -33,7 +33,7 @@ This project demonstrates practical SQL concepts used in real-world database app
         <li>Manage employees</li>
       </ul>
     </td>
-    <td valign="top" width="50">
+    <td valign="top" width="150">
       <ul>
         <li>Generate invoices</li>
         <li>Process payments</li>
