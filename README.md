@@ -74,8 +74,10 @@ This project demonstrates practical SQL concepts used in real-world database app
   </tr>
 </table>
 
+<br clear="both">
+
 <div align="center">
-## 🗄️ Create Database
+  <h2>🗄️ Create Database</h2>
 
 The following SQL script creates the **Hotel_DB** database.
 
@@ -87,7 +89,7 @@ USE Hotel_DB;
 GO
 ```
 
-📂 **Full Script:** [`Database/01_Create_Database.sql`](Database/01_Create_Database.sql)
+
   
 </div>
 
