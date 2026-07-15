@@ -1,7 +1,14 @@
 ## 🏨 Hotel Booking Management System – SQL Project
 
-📌 **Project Overview**
+<p align="center">
+  <img src="https://img.shields.io/badge/SQL_Server-Database-red?style=for-the-badge&logo=microsoftsqlserver&logoColor=white">
+  <img src="https://img.shields.io/badge/SSMS-Management_Studio-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Project-SQL-orange?style=for-the-badge">
+</p>
 
-The Hotel Booking Management System is a real-world SQL database project designed to streamline hotel operations by managing customers, room bookings, employees, payments, and business reports.
+## 📌 Project Overview
 
-This project demonstrates practical SQL concepts such as database design, normalization, constraints, joins, stored procedures, functions, views, triggers, indexing, and reporting.
+The **Hotel Booking Management System** is a SQL-based database project designed to automate hotel operations such as customer registration, room booking, check-in/check-out, payment processing, and business reporting.
+
+This project demonstrates practical SQL concepts used in real-world database applications.
