@@ -152,15 +152,19 @@ CREATE TABLE [dbo].[tbl_Employee](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-```
 <br clear="both">
+```
+
+
 ### 🆕 Check table is created or not. 
 
 ```sql
 select * from tbl_Employee
-```
+
 <img width="1877" height="452" alt="image" src="https://github.com/user-attachments/assets/c6a2a583-d700-4635-a114-837dc99c6fa4" />
+
 <br clear="both">
+```
 
 ✅ **Result:** The `tbl_Employee` table is successfully created and ready for the next step.
 
