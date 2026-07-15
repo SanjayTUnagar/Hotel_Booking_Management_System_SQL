@@ -81,18 +81,19 @@ This project demonstrates practical SQL concepts used in real-world database app
 
 The following SQL script creates the **Hotel_DB** database.
 
-```sql
-<h3>Check if the database already exists** </h3>
+### **🗄️ Check if the database already exists**
 
+```sql
 IF DB_ID('Hotel_DB') IS NOT NULL
 BEGIN
     DROP DATABASE Hotel_DB;
 END;
 GO
+```
 
-<h3>Create Database**</h3>
+### **🆕 Create Database**
 
-
+```sql
 CREATE DATABASE Hotel_DB;
 GO
 
