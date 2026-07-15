@@ -161,13 +161,12 @@ GO
 ```sql
 select * from tbl_Employee
 ```
-```sql
+
 <img width="1877" height="452" alt="image" src="https://github.com/user-attachments/assets/c6a2a583-d700-4635-a114-837dc99c6fa4" />
 
-> ✅ **Result:** The `tbl_Employee` table is successfully created and ready for the next step.
-```
 
-  
+> ✅ **Result:** The `tbl_Employee` table is successfully created and ready for the next step.
+ 
 </div>
 
 
