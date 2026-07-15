@@ -48,14 +48,38 @@ This project demonstrates practical SQL concepts used in real-world database app
 <br clear="both">
 <div align="center">
 <h2>🛠️ Technologies Used</h2>
-
-| Technology | Description |
-|------------|-------------|
-| Microsoft SQL Server | Database |
-| SQL Server Management Studio | Database Development |
-| SQL | Query Language |
-| GitHub | Project Repository |
-
 </div>
+<table align="center" width="100%">
+ <tr>
+    <th align="left">Technology</th>
+    <th align="left">Description</th>
+  </tr>
+  <tr>
+    <td valign="top" width="50%">
+      <ul>
+        <li>Microsoft SQL Server</li>
+        <li>SQL Server Management Studio</li>
+        <li>SQL</li>
+        <li>GitHub</li>
+      </ul>
+    </td>
+    <td valign="top" width="50%">
+      <ul>
+        <li>Database</li>
+        <li>Database Development</li>
+        <li>Query Language</li>
+        <li>Project Repository</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
 
 
