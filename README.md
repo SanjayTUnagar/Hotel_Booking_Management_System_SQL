@@ -102,6 +102,7 @@ GO
 USE Hotel_DB;
 GO
 ```
+> ✅ **Result:** The `Hotel_DB` database is successfully created and ready for the next step.
 
 
   
