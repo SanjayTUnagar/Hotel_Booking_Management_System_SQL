@@ -27,29 +27,27 @@ This project demonstrates practical SQL concepts used in real-world database app
   <tr>
     <td valign="top">
       <ul>
-        <li>- Manage hotel room bookings</li>
-        <li>- Store customer information</li>
-        <li>- Track room availability</li>
-        <li>- Manage employees</li>
+        <li>Manage hotel room bookings</li>
+        <li>Store customer information</li>
+        <li>Track room availability</li>
+        <li>Manage employees</li>
       </ul>
     </td>
     <td valign="top">
       <ul>
-        <li>- Generate invoices</li>
-        <li>- Process payments</li>
-        <li>- Create business reports</li>
-        <li>- Improve hotel management efficiency</li>
+        <li>Generate invoices</li>
+        <li>Process payments</li>
+        <li>Create business reports</li>
+        <li>Improve hotel management efficiency</li>
       </ul>
     </td>
   </tr>
 </table>
 
 
-
-
-
-
-  ## 🛠️ Technologies Used
+<br clear="both">
+<div align="center">
+<h2>🛠️ Technologies Used</h2>
 
 | Technology | Description |
 |------------|-------------|
@@ -58,6 +56,6 @@ This project demonstrates practical SQL concepts used in real-world database app
 | SQL | Query Language |
 | GitHub | Project Repository |
 
-
+</div>
 
 
