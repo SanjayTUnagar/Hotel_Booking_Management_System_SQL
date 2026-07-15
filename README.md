@@ -152,13 +152,14 @@ CREATE TABLE [dbo].[tbl_Employee](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+```
 
-
-### 🆕 Check table is created or not. 
+## 🆕 Check table is created or not. 
 
 ```sql
 select * from tbl_Employee
 ```
+
 > ✅ **Result:** The `Hotel_DB` database is successfully created and ready for the next step.
 
 
