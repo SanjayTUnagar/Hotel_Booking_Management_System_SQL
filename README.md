@@ -13,16 +13,35 @@ The **Hotel Booking Management System** is a SQL-based database project designed
 
 This project demonstrates practical SQL concepts used in real-world database applications.
 
-## 🎯 Objectives
 
-- Manage hotel room bookings
-- Store customer information
-- Track room availability
-- Manage employees
-- Generate invoices
-- Process payments
-- Create business reports
-- Improve hotel management efficiency
+<table>
+  <tr>
+    <th align="left"> ## 🎯 Objectives</th>
+  </tr>
+  <tr>
+    <td valign="top">
+      <ul>
+        <li>- Manage hotel room bookings</li>
+        <li>- Store customer information</li>
+        <li>- Track room availability</li>
+        <li>- Manage employees</li>
+      </ul>
+    </td>
+    <td valign="top">
+      <ul>
+        <li>- Generate invoices</li>
+        <li>- Process payments</li>
+        <li>- Create business reports</li>
+        <li>- Improve hotel management efficiency</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
 
   ## 🛠️ Technologies Used
 
