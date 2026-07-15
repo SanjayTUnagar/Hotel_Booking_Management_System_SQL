@@ -75,6 +75,7 @@ This project demonstrates practical SQL concepts used in real-world database app
 </table>
 
 <div align="center">
+```sql
 /*===========================================================
  Project      : Hotel Booking Management System
  File         : 01_Create_Database.sql
