@@ -117,7 +117,7 @@ The following SQL script creates the **tbl_Employee** table.
 USE [Hotel_DB]
 GO
 
-/****** Object:  Table [dbo].[tbl_Employee]    Script Date: 16-07-2026 03:05:59 ******/
+/****** Object:  Table [dbo].[tbl_Employee]  ******/
 SET ANSI_NULLS ON
 GO
 
@@ -153,16 +153,16 @@ CREATE TABLE [dbo].[tbl_Employee](
 ) ON [PRIMARY]
 GO
 ```
-
+<br clear="both">
 ### 🆕 Check table is created or not. 
 
 ```sql
 select * from tbl_Employee
 ```
 <img width="1877" height="452" alt="image" src="https://github.com/user-attachments/assets/c6a2a583-d700-4635-a114-837dc99c6fa4" />
+<br clear="both">
 
-
-> ✅ **Result:** The `tbl_Employee` table is successfully created and ready for the next step.
+✅ **Result:** The `tbl_Employee` table is successfully created and ready for the next step.
 
 
   
