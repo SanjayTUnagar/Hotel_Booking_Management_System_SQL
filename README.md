@@ -55,7 +55,7 @@ This project demonstrates practical SQL concepts used in real-world database app
     <th align="left"><b>Description</b></th>
   </tr>
   <tr>
-    <td valign="top" width="200">
+    <td valign="top" width="500">
       <ul>
         <li>Microsoft SQL Server</li>
         <li>SQL Server Management Studio</li>
@@ -63,7 +63,7 @@ This project demonstrates practical SQL concepts used in real-world database app
         <li>GitHub</li>
       </ul>
     </td>
-    <td valign="top" width="200">
+    <td valign="top" width="500">
       <ul>
         <li>Database</li>
         <li>Database Development</li>
