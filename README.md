@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/SQL_Server-Database-red?style=for-the-badge&logo=microsoftsqlserver&logoColor=white">
   <img src="https://img.shields.io/badge/SSMS-Management_Studio-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Status-Process?style=for-the-badge">
+ <img src="https://img.shields.io/badge/Status-In%20Progress-yellow?style=for-the-badge">
   <img src="https://img.shields.io/badge/Project-SQL-orange?style=for-the-badge">
 </p>
 
