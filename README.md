@@ -185,10 +185,12 @@ VALUES
 > ✅ **Result:** The `tbl_Employee` table data is inserted successfully ready for the next step.
 
 
-### 🆕 Check table is created or not. 
+### 🆕 Verify Table Creation 
 
 ```sql
+
 select * from tbl_Employee
+
 ```
 
 <img width="1877" height="452" alt="image" src="https://github.com/user-attachments/assets/c6a2a583-d700-4635-a114-837dc99c6fa4" />
