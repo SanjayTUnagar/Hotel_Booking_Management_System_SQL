@@ -51,11 +51,11 @@ This project demonstrates practical SQL concepts used in real-world database app
 </div>
 <table align="center" width="100%">
  <tr>
-    <th align="left">Technology</th>
-    <th align="left">Description</th>
+    <th align="left"><b>Technology</b></th>
+    <th align="left"><b>Description</b></th>
   </tr>
   <tr>
-    <td valign="top" width="50%">
+    <td valign="top" width="60%">
       <ul>
         <li>Microsoft SQL Server</li>
         <li>SQL Server Management Studio</li>
@@ -63,7 +63,7 @@ This project demonstrates practical SQL concepts used in real-world database app
         <li>GitHub</li>
       </ul>
     </td>
-    <td valign="top" width="50%">
+    <td valign="top" width="40%">
       <ul>
         <li>Database</li>
         <li>Database Development</li>
