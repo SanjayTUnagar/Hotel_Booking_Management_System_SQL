@@ -19,6 +19,11 @@ This project demonstrates practical SQL concepts used in real-world database app
 
 <br clear="both">
 
+<img width="100%" height="1024" alt="Hotel_Booking_Management_System_SQL" src="https://github.com/user-attachments/assets/72d72d6c-dd63-429d-a6cb-35b5f93b5d25" />
+
+
+<br clear="both">
+
 <div>
 <h2>🎯 Objectives</h2>
 </div>
