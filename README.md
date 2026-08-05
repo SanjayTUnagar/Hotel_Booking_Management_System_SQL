@@ -918,8 +918,6 @@ END
 GO
 
 
-
-
 ```
 
 ### 🆕 Verify SP Creation  
@@ -1071,7 +1069,24 @@ AND o.OrderStatus='Confirmed';
 <img width="485" height="240" alt="image" src="https://github.com/user-attachments/assets/c2a2142e-f021-49ac-8b4d-93b9ac0ff61c" />
 
 
+---
 
+# 👨‍💻 Author
+
+### Sanjay Unagar
+**Data Analyst | Python | SQL | Excel | Power BI | Pandas | Numpy | Matplotlib | Seaborn | Data Visualization**
+
+🌐 **Portfolio:** https://sanjayunagar.netlify.app
+
+💼 **LinkedIn:** https://www.linkedin.com/in/sanjayunagar/
+
+🐙 **GitHub:** https://github.com/SanjayTUnagar
+
+---
+
+# ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
 
 
 
