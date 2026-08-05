@@ -575,7 +575,7 @@ select * from tbl_Package
 USE [Hotel_DB]
 GO
 
-/****** Object:  Table [dbo].[tbl_MenuMaster]    Script Date: 06-08-2026 03:03:51 ******/
+/****** Object:  Table [dbo].[tbl_MenuMaster]  ******/
 SET ANSI_NULLS ON
 GO
 
@@ -652,7 +652,7 @@ select * from tbl_MenuMaster
 USE [Hotel_DB]
 GO
 
-/****** Object:  Table [dbo].[tbl_Billing]    Script Date: 06-08-2026 03:08:16 ******/
+/****** Object:  Table [dbo].[tbl_Billing]  ******/
 SET ANSI_NULLS ON
 GO
 
@@ -735,7 +735,7 @@ select * from tbl_Billing
 USE [Hotel_DB]
 GO
 
-/****** Object:  Table [dbo].[tbl_Salary]    Script Date: 06-08-2026 03:12:58 ******/
+/****** Object:  Table [dbo].[tbl_Salary]   ******/
 SET ANSI_NULLS ON
 GO
 
