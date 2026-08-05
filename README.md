@@ -813,6 +813,72 @@ select * from tbl_Salary
 > ✅ **Result:** The `tbl_Salary` table is successfully created and ready for the next step.
  
 
+<br clear="both">
+<div>
+  <h2>🗄️ Step 2: Create Stored Procedure</h2>
+
+Display all confirmed hotel bookings and confirmed orders. The procedure should retrieve customer, booking, and order information and calculate Net Amount, GST (5%), and Total Bill.
+
+```sql
+
+USE [Hotel_DB]
+GO
+
+/****** Object:  StoredProcedure [dbo].[SP_Orders]    Script Date: 06-08-2026 03:24:20 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[SP_Orders] 	
+AS
+BEGIN
+		
+select
+    c.CustomerID,
+    c.CustomerName,
+    b.BookingID,
+    b.BookingCode,
+    b.BookingStatus,
+    o.OrderID,
+    o.OrderCode,
+    o.OrderStatus,
+    b.PaymentIntrument,
+    b.TransactionNo,
+    Quantity,
+    Quantity*b.TotalAmount as NetAmount,
+    Quantity*(b.TotalAmount*5/100) as GST,
+    Quantity*(b.TotalAmount+b.TotalAmount*5/100) as TotalBill
+
+from tbl_Customer as c
+inner join tbl_Booking as b
+    on c.CustomerID = b.CustomerID
+inner join tbl_Orders as o
+    on b.OrderID = o.OrderID
+where b.BookingStatus = 'Confirmed' and o.OrderStatus = 'Confirmed'
+  
+END
+GO
+
+```
+
+### 🆕 Verify Table Creation  
+
+```sql
+
+SP_Orders
+
+```
+
+<br clear="both">
+
+<img width="1162" height="241" alt="image" src="https://github.com/user-attachments/assets/9a4f3c2a-c345-41cb-a435-6020e291e0ef" />
+
+
+> ✅ **Result:** The `Stored Procedure` is successfully created and ready for the next step.
+
+</div>
 
 
 
