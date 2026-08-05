@@ -300,6 +300,14 @@ values
 
 ```
 
+### 🆕 Verify Table Creation  
+
+```sql
+
+select * from tbl_Customer
+
+```
+
 <br clear="both">
 
 <img width="1877" height="456" alt="image" src="https://github.com/user-attachments/assets/c964ceac-ae2b-42b0-aec9-2617384ed381" />
