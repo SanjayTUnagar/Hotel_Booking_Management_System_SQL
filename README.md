@@ -394,6 +394,177 @@ select * from tbl_Orders
 <br clear="both">
 
 > ✅ **Result:** The `tbl_Orders` table is successfully created and ready for the next step.
+
+
+### 🆕 Create table for tbl_Booking  
+
+```sql
+
+USE [Hotel_DB]
+GO
+
+/****** Object:  Table [dbo].[tbl_Booking] ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_Booking](
+	[BookingID] [int] IDENTITY(1,1) NOT NULL,
+	[BookingCode] [varchar](20) NULL,
+	[CustomerID] [int] NULL,
+	[PackageID] [int] NULL,
+	[OrderID] [int] NULL,
+	[BookingDate] [datetime] NULL,
+	[CheckInDate] [datetime] NULL,
+	[CheckOutDate] [datetime] NULL,
+	[Adults] [int] NULL,
+	[Children] [int] NULL,
+	[TotalDays] [int] NULL,
+	[PaymentIntrument] [varchar](50) NULL,
+	[TransactionNo] [varchar](100) NULL,
+	[TransactionDate] [datetime] NULL,
+	[BookingStatus] [varchar](50) NULL,
+	[TotalAmount] [int] NULL,
+ CONSTRAINT [PK_tbl_Booking] PRIMARY KEY CLUSTERED 
+(
+	[BookingID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
+```
+
+### 🆕 Insert the data in the Table 
+
+```sql
+INSERT INTO tbl_Booking
+(BookingCode, CustomerID, PackageID, OrderID, BookingDate, CheckInDate, CheckOutDate,
+ Adults, Children, TotalDays, PaymentIntrument, TransactionNo, TransactionDate,
+ BookingStatus, TotalAmount)
+VALUES
+('BK001', 1, 1, 1, GETDATE()+1, GETDATE()+3, GETDATE()+2, 2, 1, 2, 'UPI', 'TXN1001', GETDATE()+4, 'Confirmed', 12000),
+('BK002', 2, 2, 2, GETDATE()+2, GETDATE()+3, GETDATE()+3, 2, 0, 3, 'NEFT', 'TXN1002', GETDATE()+4, 'Confirmed', 18000),
+('BK003', 3, 3, 3, GETDATE()+1, GETDATE()+4, GETDATE()+5, 4, 2, 4, 'Cheque', 'TXN1003', GETDATE()+6, 'Pending', 35000),
+('BK004', 4, 4, 4, GETDATE()+2, GETDATE()+3, GETDATE()+4, 2, 2, 3, 'Net Banking', 'TXN1004', GETDATE()+5, 'Confirmed', 22000),
+('BK005', 5, 5, 5, GETDATE(), GETDATE(), GETDATE()+1, 3, 1, 4, 'UPI', 'TXN1005', GETDATE()+2, 'Confirmed', 28000),
+('BK006', 6, 1, 6, GETDATE()+1, GETDATE()+2, GETDATE()+3, 2, 0, 2, 'Cheque', 'TXN1006', GETDATE()+4, 'Pending', 15000),
+('BK007', 7, 2, 7, GETDATE()+2, GETDATE()+4, GETDATE()+5, 4, 2, 3, 'UPI', 'TXN1007', GETDATE()+6, 'Confirmed', 25000),
+('BK008', 8, 3, 8, GETDATE()+4, GETDATE()+2, GETDATE()+3, 2, 1, 4, 'NEFT', 'TXN1008', GETDATE()+5, 'Confirmed', 30000),
+('BK009', 9, 4, 9, GETDATE()+5, GETDATE()+2, GETDATE()+3, 1, 0, 2, 'Net Banking', 'TXN1009', GETDATE()+6, 'Pending', 16000),
+('BK010', 10, 5, 10, GETDATE(), GETDATE(), GETDATE()+1, 2, 2, 4, 'UPI', 'TXN1010', GETDATE()+3, 'Confirmed', 42000),
+('BK011', 11, 1, 11, GETDATE()+2, GETDATE()+3, GETDATE()+4, 2, 0, 2, 'Cheque', 'TXN1011', GETDATE()+5, 'Confirmed', 14000),
+('BK012', 12, 2, 12, GETDATE()+7, GETDATE()+1, GETDATE()+2, 3, 1, 3, 'NEFT', 'TXN1012', GETDATE()+3, 'Pending', 26000),
+('BK013', 13, 3, 13, GETDATE()+1, GETDATE()+2, GETDATE()+3, 2, 2, 4, 'UPI', 'TXN1013', GETDATE()+4, 'Confirmed', 34000),
+('BK014', 14, 4, 14, GETDATE()+4, GETDATE()+6, GETDATE()+8, 2, 0, 2, 'Net Banking', 'TXN1014', GETDATE()+7, 'Confirmed', 17000),
+('BK015', 15, 5, 15, GETDATE()+3, GETDATE()+4, GETDATE()+5, 4, 2, 4, 'Cheque', 'TXN1015', GETDATE()+5, 'Pending', 45000),
+('BK016', 16, 1, 16, GETDATE()+2, GETDATE()+4, GETDATE()+6, 2, 1, 2, 'UPI', 'TXN1016', GETDATE()+7, 'Confirmed', 13000),
+('BK017', 17, 2, 17, GETDATE()+4, GETDATE()+5, GETDATE()+6, 3, 0, 3, 'NEFT', 'TXN1017', GETDATE()+8, 'Confirmed', 21000),
+('BK018', 18, 3, 18, GETDATE(), GETDATE()+1, GETDATE()+2, 2, 2, 4, 'UPI', 'TXN1018', GETDATE()+3, 'Pending', 33000),
+('BK019', 19, 4, 19, GETDATE()+1, GETDATE()+2, GETDATE()+3, 2, 0, 2, 'Cheque', 'TXN1019', GETDATE()+4, 'Confirmed', 19000),
+('BK020', 20, 5, 20, GETDATE()+2, GETDATE()+3, GETDATE()+4, 5, 2, 4, 'Net Banking', 'TXN1020', GETDATE()+5, 'Confirmed', 52000);
+
+```
+
+### 🆕 Verify Table Creation  
+
+```sql
+
+select * from tbl_Booking
+
+```
+<img width="1626" height="456" alt="image" src="https://github.com/user-attachments/assets/f5389cb3-5ee0-4bcd-ba8c-609ab56ba564" />
+
+<br clear="both">
+
+> ✅ **Result:** The `tbl_Booking` table is successfully created and ready for the next step.
+ 
+
+### 🆕 Create table for tbl_Package  
+
+```sql
+
+USE [Hotel_DB]
+GO
+
+/****** Object:  Table [dbo].[tbl_Package]    Script Date: 06-08-2026 02:59:13 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_Package](
+	[PackageID] [int] IDENTITY(1,1) NOT NULL,
+	[PackageCode] [varchar](50) NULL,
+	[PackageName] [varchar](150) NULL,
+	[PackageType] [varchar](300) NULL,
+	[NoOfDays] [int] NULL,
+	[BreakfastIncluded] [varchar](10) NULL,
+	[LunchIncluded] [varchar](10) NULL,
+	[DinnerIncluded] [varchar](10) NULL,
+	[PackagePrice] [int] NULL,
+	[DiscountPercent] [int] NULL,
+	[Availability] [varchar](20) NULL,
+	[CreatedDate] [datetime] NULL,
+	[Status] [varchar](30) NULL,
+ CONSTRAINT [PK_tbl_Package] PRIMARY KEY CLUSTERED 
+(
+	[PackageID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+```
+
+### 🆕 Insert the data in the Table 
+
+```sql
+insert into tbl_Package
+(
+    PackageCode,PackageName,PackageType,NoOfDays,BreakfastIncluded,LunchIncluded,DinnerIncluded,PackagePrice,DiscountPercent,
+    Availability,CreatedDate,Status
+)
+values
+('PKG001','Economy Stay','Normal',1,'Yes','No','No',1999,5,'Available',GETDATE()-5,'Active'),
+('PKG002','Economy Stay','Standard',2,'Yes','No','No',3500,10,'Available',GETDATE(),'Active'),
+('PKG003','Family Fun','Standard',3,'Yes','Yes','No',6000,12,'Available',GETDATE()-9,'Active'),
+('PKG004','Family Fun','Delux',5,'Yes','Yes','Yes',12999,15,'Available',GETDATE()-1,'Active'),
+('PKG005','Honeymoon Romance','Luxury Suite',3,'Yes','Yes','Yes',15000,20,'Available',GETDATE()-3,'Active'),
+('PKG006','Honeymoon Romance','Executive',2,'Yes','Yes','Yes',18000,10,'Available',GETDATE()-7,'Active'),
+('PKG007','Summer Holiday','Standard',4,'Yes','Yes','No',8000,8,'Available',GETDATE()-10,'Active'),
+('PKG008','Summer Holiday','Delux',6,'Yes','Yes','Yes',9000,18,'Available',GETDATE()-3,'Active'),
+('PKG009','Festival Special','Normal',2,'Yes','No','No',5500,5,'Available',GETDATE()-7,'Active'),
+('PKG010','Festival Special','Luxury Suite',4,'Yes','Yes','Yes',3500,25,'Available',GETDATE()-6,'Active'),
+('PKG011','Business Stay','Executive',3,'Yes','Yes','No',15000,10,'Not Available',GETDATE()-3,'Inactive'),
+('PKG012','Business Stay','Luxury Suite',5,'Yes','Yes','Yes',21000,15,'Available',GETDATE()-1,'Active'),
+('PKG013','Weekend Escape','Standard',2,'Yes','No','No',8000,10,'Available',GETDATE(),'Active'),
+('PKG014','Weekend Escape','Delux',3,'Yes','Yes','Yes',7500,12,'Available',GETDATE()-7,'Active'),
+('PKG015','Luxury Retreat','Luxury Suite',7,'Yes','Yes','Yes',35000,20,'Available',GETDATE()-5,'Active'),
+('PKG016','Corporate Package','Executive',4,'Yes','Yes','No',50000,15,'Not Available',GETDATE()-12,'Inactive'),
+('PKG017','Couple Special','Delux',2,'Yes','Yes','Yes',20000,10,'Available',GETDATE()-10,'Active'),
+('PKG018','Family Vacation','Luxury Suite',6,'Yes','Yes','Yes',8000,22,'Available',GETDATE(),'Active'),
+('PKG019','Holiday Special','Standard',3,'Yes','Yes','No',7499,8,'Not Available',GETDATE()-3,'Inactive'),
+('PKG020','Premium Escape','Luxury Suite',7,'Yes','Yes','Yes',10000,30,'Available',GETDATE()-4,'Active');
+
+```
+
+### 🆕 Verify Table Creation  
+
+```sql
+
+select * from tbl_Package
+
+```
+<img width="1326" height="471" alt="image" src="https://github.com/user-attachments/assets/6ff7dc18-15ec-46e9-a0b1-a831f2b72019" />
+
+<br clear="both">
+
+> ✅ **Result:** The `tbl_Package` table is successfully created and ready for the next step.
  
 
 
