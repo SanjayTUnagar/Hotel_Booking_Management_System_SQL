@@ -205,7 +205,7 @@ select * from tbl_Employee
  
 </div>
 
-### 🆕 Create table for   
+### 🆕 Create table for tbl_Customer  
 
 ```sql
 
@@ -249,8 +249,65 @@ CREATE TABLE [dbo].[tbl_Customer](
 ) ON [PRIMARY]
 GO
 
+```
+
+### 🆕 Insert the data in the Table 
+
+```sql
+insert into tbl_Customer(CustomerCode,CustomerName,Gender,DateOfBirth,MaritalStatus,MobileNo,EmailID,Address,City,
+    State,Country,Nationality,IDProofType,IDProofNumber,MembershipType,RegistrationDate,PreferredRoomType,CheckInDateTime,
+    CheckOutDateTime,PackageID,Status)
+values
+('CUST001','Rahul Sharma','Male','1992-05-12','Single','9876543210','rahul.sharma@gmail.com','Satellite Road','Ahmedabad','Gujarat','India','Indian','Aadhar Card','123456789012','Gold','2026-01-10','Deluxe',GETDATE(),GETDATE()+2,1,'Confirmed'),
+
+('CUST002','Priya Patel','Female','1995-08-18','Married','9876543211','priya.patel@gmail.com','Navrangpura','Ahmedabad','Gujarat','India','Indian','Passport','P1234567','Silver','2026-01-15','Suite',GETDATE(),GETDATE()+4,2,'Confirmed'),
+
+('CUST003','Amit Shah','Male','1990-03-25','Married','9876543212','amit.shah@gmail.com','SG Highway','Ahmedabad','Gujarat','India','Indian','Aadhar Card','456789123456','Regular','2026-02-01','Executive',GETDATE(),GETDATE()+1,3,'Checked In'),
+
+('CUST004','Neha Joshi','Female','1998-11-21','Single','9876543213','neha.joshi@gmail.com','Maninagar','Ahmedabad','Gujarat','India','Indian','Passport','P2345678','Platinum','2026-02-10','Suite',GETDATE(),GETDATE()+5,4,'Confirmed'),
+
+('CUST005','Rohan Mehta','Male','1993-09-10','Single','9876543214','rohan.mehta@gmail.com','Paldi','Ahmedabad','Gujarat','India','Indian','Aadhar Card','789456123789','Gold','2026-02-15','Deluxe',GETDATE(),GETDATE()+4,5,'Checked Out'),
+
+('CUST006','Sneha Desai','Female','1997-06-05','Single','9876543215','sneha.desai@gmail.com','Bopal','Ahmedabad','Gujarat','India','Indian','Passport','P3456789','Silver','2026-03-01','Executive',GETDATE(),GETDATE()+3,2,'Confirmed'),
+
+('CUST007','Karan Singh','Male','1989-04-17','Married','9876543216','karan.singh@gmail.com','Thaltej','Ahmedabad','Gujarat','India','Indian','Aadhar Card','963852741852','Regular','2026-03-10','Suite',GETDATE(),GETDATE(),3,'Cancelled'),
+
+('CUST008','Pooja Verma','Female','1994-12-30','Married','9876543217','pooja.verma@gmail.com','Vastrapur','Ahmedabad','Gujarat','India','Indian','Passport','P4567891','Gold','2026-03-15','Deluxe',GETDATE(),GETDATE()+2,1,'Confirmed'),
+
+('CUST009','Arjun Kumar','Male','1996-01-20','Single','9876543218','arjun.kumar@gmail.com','Naranpura','Ahmedabad','Gujarat','India','Indian','Aadhar Card','852963741258','Silver','2026-04-01','Suite',GETDATE(),GETDATE()+3,4,'Checked In'),
+
+('CUST010','Kavita Shah','Female','1991-10-08','Married','9876543219','kavita.shah@gmail.com','Gota','Ahmedabad','Gujarat','India','Indian','Passport','P5678912','Regular','2026-04-10','Executive',GETDATE(),GETDATE()+6,2,'Confirmed'),
+
+('CUST011','Vikas Patel','Male','1988-07-07','Married','9876543220','vikas.patel@gmail.com','Chandkheda','Ahmedabad','Gujarat','India','Indian','Aadhar Card','741852963147','Gold','2026-04-15','Suite',GETDATE(),GETDATE()+7,5,'Confirmed'),
+
+('CUST012','Anjali Sharma','Female','1999-02-14','Single','9876543221','anjali.sharma@gmail.com','Isanpur','Ahmedabad','Gujarat','India','Indian','Passport','P6789123','Silver','2026-05-01','Deluxe',GETDATE(),GETDATE()+4,1,'Checked In'),
+
+('CUST013','Deepak Rana','Male','1992-09-19','Single','9876543222','deepak.rana@gmail.com','Nikol','Ahmedabad','Gujarat','India','Indian','Aadhar Card','369852147852','Regular','2026-05-10','Executive',GETDATE(),GETDATE()+2,3,'Confirmed'),
+
+('CUST014','Meera Joshi','Female','1995-11-11','Married','9876543223','meera.joshi@gmail.com','Memnagar','Ahmedabad','Gujarat','India','Indian','Passport','P7891234','Gold','2026-05-15','Suite',GETDATE(),GETDATE()+1,4,'Confirmed'),
+
+('CUST015','Suresh Yadav','Male','1987-05-25','Married','9876543224','suresh.yadav@gmail.com','Ranip','Ahmedabad','Gujarat','India','Indian','Aadhar Card','258963147852','Platinum','2026-05-20','Executive',GETDATE(),GETDATE(),5,'Checked Out'),
+
+('CUST016','Ritu Kapoor','Female','1993-08-09','Single','9876543225','ritu.kapoor@gmail.com','Sabarmati','Ahmedabad','Gujarat','India','Indian','Passport','P8912345','Silver','2026-06-01','Deluxe',GETDATE(),GETDATE()+3,2,'Confirmed'),
+
+('CUST017','Harsh Trivedi','Male','1991-12-18','Married','9876543226','harsh.trivedi@gmail.com','Bapunagar','Ahmedabad','Gujarat','India','Indian','Aadhar Card','357159258456','Gold','2026-06-05','Suite',GETDATE(),GETDATE()+2,1,'Confirmed'),
+
+('CUST018','Nisha Patel','Female','1998-04-16','Single','9876543227','nisha.patel@gmail.com','Naroda','Ahmedabad','Gujarat','India','Indian','Passport','P9123456','Regular','2026-06-10','Executive',GETDATE(),GETDATE()+1,3,'Checked In'),
+
+('CUST019','Manoj Gupta','Male','1989-06-28','Married','9876543228','manoj.gupta@gmail.com','Ellisbridge','Ahmedabad','Gujarat','India','Indian','Aadhar Card','654123987456','Silver','2026-06-15','Deluxe',GETDATE(),GETDATE()+10,2,'Confirmed'),
+
+('CUST020','Aisha Khan','Female','1997-01-30','Single','9876543229','aisha.khan@gmail.com','Prahlad Nagar','Ahmedabad','Gujarat','India','Indian','Passport','P9988776','Platinum','2026-06-20','Suite',GETDATE(),GETDATE()+2,5,'Confirmed');
 
 ```
+
+<br clear="both">
+
+<img width="1877" height="456" alt="image" src="https://github.com/user-attachments/assets/c964ceac-ae2b-42b0-aec9-2617384ed381" />
+
+<br clear="both">
+
+> ✅ **Result:** The `tbl_Employee` table is successfully created and ready for the next step.
+ 
 
 
 
