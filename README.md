@@ -824,7 +824,7 @@ Display all confirmed hotel bookings and confirmed orders. The procedure should 
 USE [Hotel_DB]
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_Orders]    Script Date: 06-08-2026 03:24:20 ******/
+/****** Object:  StoredProcedure [dbo].[SP_Orders]   ******/
 SET ANSI_NULLS ON
 GO
 
@@ -863,7 +863,7 @@ GO
 
 ```
 
-### 🆕 Verify Table Creation  
+### 🆕 Verify SP Creation  
 
 ```sql
 
@@ -892,7 +892,7 @@ find the minimum Total Bill from all confirmed hotel orders.
 USE [Hotel_DB]
 GO
 
-/****** Object:  StoredProcedure [dbo].[SP_Minimum_Order]    Script Date: 06-08-2026 03:34:48 ******/
+/****** Object:  StoredProcedure [dbo].[SP_Minimum_Order]  ******/
 SET ANSI_NULLS ON
 GO
 
@@ -903,9 +903,7 @@ GO
 CREATE PROCEDURE [dbo].[SP_Minimum_Order]
 	
 AS
-BEGIN
-	
-	-- Find minimum Record 
+BEGIN 
 
 select min(Quantity * (b.TotalAmount + b.TotalAmount * 5 / 100)) as MinimumTotalBill
 from tbl_Customer as c
@@ -940,6 +938,148 @@ SP_Minimum_Order
 > ✅ **Result:** The `Stored Procedure` is successfully created and ready for the next step.
 
 </div>
+
+
+
+### 🆕 Display all confirmed bookings.  
+
+```sql
+
+SELECT * FROM tbl_Booking
+WHERE BookingStatus = 'Confirmed';
+
+```
+
+<br clear="both">
+
+<img width="1611" height="332" alt="image" src="https://github.com/user-attachments/assets/5f835092-7415-4717-af0d-60ca0c588f36" />
+
+
+### 🆕 Display customers who booked Delux packages.  
+
+```sql
+
+SELECT c.CustomerID, c.CustomerName, p.PackageName, p.PackageType, b.BookingCode
+FROM tbl_Customer c
+INNER JOIN tbl_Booking b
+ON c.CustomerID = b.CustomerID
+INNER JOIN tbl_Package p
+ON b.PackageID = p.PackageID
+WHERE p.PackageType = 'Delux';
+
+```
+
+<br clear="both">
+
+<img width="513" height="140" alt="image" src="https://github.com/user-attachments/assets/92875e94-512c-4297-bfe7-8747d4cbf321" />
+
+
+### 🆕 Display bookings with total days greater than 3.  
+
+```sql
+
+SELECT *
+FROM tbl_Booking
+WHERE TotalDays > 3;
+
+```
+
+<br clear="both">
+
+<img width="1630" height="222" alt="image" src="https://github.com/user-attachments/assets/f6813e3a-f199-45fd-943d-a5007838c767" />
+
+
+### 🆕 Display customers who paid using UPI.  
+
+```sql
+
+SELECT c.CustomerID, c.CustomerName, b.BookingCode, b.PaymentIntrument, b.TransactionNo
+FROM tbl_Customer c
+INNER JOIN tbl_Booking b
+ON c.CustomerID = b.CustomerID
+WHERE b.PaymentIntrument='UPI';
+
+```
+
+<br clear="both">
+
+<img width="542" height="205" alt="image" src="https://github.com/user-attachments/assets/2addaec7-8e64-4f32-87f1-28aed0ee0be8" />
+
+
+### 🆕 Display available menu items.  
+
+```sql
+
+SELECT
+    MenuID,
+    MenuCode,
+    MenuName,
+    MenuCategory,
+    MenuType,
+    MenuPrice
+FROM tbl_MenuMaster
+WHERE Availability='Available';
+
+```
+
+<br clear="both">
+
+<img width="567" height="442" alt="image" src="https://github.com/user-attachments/assets/883a61a6-e8ed-4cee-a517-153693d0cade" />
+
+
+### 🆕 Display customer, booking, and package details.  
+
+```sql
+
+SELECT c.CustomerName, b.BookingCode, p.PackageName, p.PackagePrice
+FROM tbl_Customer c
+INNER JOIN tbl_Booking b
+ON c.CustomerID=b.CustomerID
+INNER JOIN tbl_Package p
+ON b.PackageID=p.PackageID;
+
+```
+
+<br clear="both">
+
+<img width="437" height="383" alt="image" src="https://github.com/user-attachments/assets/0f22fd86-5f7e-4846-b158-062ed2694cfc" />
+
+
+### 🆕 Display customer bill with GST.  
+
+```sql
+
+SELECT
+    c.CustomerName,
+    o.Quantity,
+    b.TotalAmount,
+    o.Quantity*b.TotalAmount AS NetAmount,
+    o.Quantity*(b.TotalAmount*5/100) AS GST,
+    o.Quantity*(b.TotalAmount+b.TotalAmount*5/100) AS TotalBill
+FROM tbl_Customer c
+INNER JOIN tbl_Booking b
+ON c.CustomerID=b.CustomerID
+INNER JOIN tbl_Orders o
+ON b.OrderID=o.OrderID
+WHERE b.BookingStatus='Confirmed'
+AND o.OrderStatus='Confirmed';
+
+```
+
+<br clear="both">
+
+<img width="485" height="240" alt="image" src="https://github.com/user-attachments/assets/c2a2142e-f021-49ac-8b4d-93b9ac0ff61c" />
+
+
+
+
+
+
+
+
+
+
+
 
 
 
