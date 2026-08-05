@@ -815,7 +815,7 @@ select * from tbl_Salary
 
 <br clear="both">
 <div>
-  <h2>🗄️ Step 2: Create Stored Procedure</h2>
+  <h2>🗄️ Step 3: Create Stored Procedure</h2>
 
 Display all confirmed hotel bookings and confirmed orders. The procedure should retrieve customer, booking, and order information and calculate Net Amount, GST (5%), and Total Bill.
 
@@ -880,6 +880,66 @@ SP_Orders
 
 </div>
 
+
+<br clear="both">
+<div>
+  <h2>🗄️ Create Stored Procedure for Minimum Order </h2>
+
+find the minimum Total Bill from all confirmed hotel orders.
+
+```sql
+
+USE [Hotel_DB]
+GO
+
+/****** Object:  StoredProcedure [dbo].[SP_Minimum_Order]    Script Date: 06-08-2026 03:34:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+CREATE PROCEDURE [dbo].[SP_Minimum_Order]
+	
+AS
+BEGIN
+	
+	-- Find minimum Record 
+
+select min(Quantity * (b.TotalAmount + b.TotalAmount * 5 / 100)) as MinimumTotalBill
+from tbl_Customer as c
+inner join tbl_Booking as b
+    on c.CustomerID = b.CustomerID
+inner join tbl_Orders as o
+    on b.OrderID = o.OrderID
+where b.BookingStatus = 'Confirmed' and o.OrderStatus = 'Confirmed';
+ 
+END
+
+GO
+
+
+
+
+```
+
+### 🆕 Verify SP Creation  
+
+```sql
+
+SP_Minimum_Order
+
+```
+
+<br clear="both">
+
+<img width="185" height="98" alt="image" src="https://github.com/user-attachments/assets/bb7de5ba-05bd-40d3-b975-41a569a70780" />
+
+
+> ✅ **Result:** The `Stored Procedure` is successfully created and ready for the next step.
+
+</div>
 
 
 
