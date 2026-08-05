@@ -491,7 +491,7 @@ select * from tbl_Booking
 USE [Hotel_DB]
 GO
 
-/****** Object:  Table [dbo].[tbl_Package]    Script Date: 06-08-2026 02:59:13 ******/
+/****** Object:  Table [dbo].[tbl_Package]    ******/
 SET ANSI_NULLS ON
 GO
 
@@ -565,6 +565,252 @@ select * from tbl_Package
 <br clear="both">
 
 > ✅ **Result:** The `tbl_Package` table is successfully created and ready for the next step.
+
+
+ 
+### 🆕 Create table for tbl_MenuMaster  
+
+```sql
+
+USE [Hotel_DB]
+GO
+
+/****** Object:  Table [dbo].[tbl_MenuMaster]    Script Date: 06-08-2026 03:03:51 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_MenuMaster](
+	[MenuID] [int] IDENTITY(1,1) NOT NULL,
+	[MenuCode] [varchar](50) NULL,
+	[MenuName] [varchar](500) NULL,
+	[MenuCategory] [varchar](50) NULL,
+	[MenuType] [varchar](50) NULL,
+	[Quantity] [int] NULL,
+	[MenuPrice] [int] NULL,
+	[Availability] [varchar](50) NULL,
+	[CreatedDate] [datetime] NULL,
+ CONSTRAINT [PK_tbl_MenuMaster] PRIMARY KEY CLUSTERED 
+(
+	[MenuID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+```
+
+### 🆕 Insert the data in the Table 
+
+```sql
+
+INSERT INTO tbl_MenuMaster
+(MenuCode, MenuName, MenuCategory, MenuType, Quantity, MenuPrice, Availability, CreatedDate)
+VALUES
+('MN001','Paneer Butter Masala','Veg','Lunch',50,250,'Available',GETDATE()+2),
+('MN002','Veg Biryani','Veg','Dinner',40,220,'Available',GETDATE()+3),
+('MN003','Chicken Biryani','Non-Veg','Dinner',35,320,'Available',GETDATE()),
+('MN004','Butter Naan','Veg','Lunch',100,40,'Available',GETDATE()+1),
+('MN005','Dal Tadka','Veg','Lunch',60,180,'Available',GETDATE()-3),
+('MN006','Chicken Curry','Non-Veg','Lunch',45,300,'Available',GETDATE()-5),
+('MN007','Fish Fry','Non-Veg','Dinner',30,350,'Available',GETDATE()-4),
+('MN008','Veg Fried Rice','Veg','Dinner',50,200,'Available',GETDATE()-2),
+('MN009','Hakka Noodles','Veg','Dinner',40,190,'Available',GETDATE()),
+('MN010','Mutton Curry','Non-Veg','Dinner',25,450,'Available',GETDATE()+2),
+('MN011','Masala Dosa','Veg','Breakfast',70,120,'Available',GETDATE()+3),
+('MN012','Idli Sambhar','Veg','Breakfast',80,90,'Available',GETDATE()-10),
+('MN013','Poha','Veg','Breakfast',60,80.00,'Available',GETDATE()-2),
+('MN014','Omelette','Non-Veg','Breakfast',50,100,'Available',GETDATE()+2),
+('MN015','Grilled Chicken','Non-Veg','Dinner',30,400,'Available',GETDATE()),
+('MN016','Veg Manchurian','Veg','Lunch',45,210,'Available',GETDATE()),
+('MN017','Pav Bhaji','Veg','Lunch',55,150,'Available',GETDATE()+1),
+('MN018','Prawn Curry','Non-Veg','Dinner',20,480,'Not-Available',GETDATE()+1),
+('MN019','Caesar Salad','Veg','Lunch',35,170,'Available',GETDATE()),
+('MN020','Chocolate Brownie','Veg','Dinner',40,160,'Available',GETDATE()+1)
+
+```
+
+### 🆕 Verify Table Creation  
+
+```sql
+
+select * from tbl_MenuMaster
+
+```
+<img width="877" height="457" alt="image" src="https://github.com/user-attachments/assets/16b3a705-f224-4d83-ba64-b1ef9fb3b411" />
+
+<br clear="both">
+
+> ✅ **Result:** The `tbl_MenuMaster` table is successfully created and ready for the next step.
+ 
+
+### 🆕 Create table for tbl_Billing  
+
+```sql
+
+USE [Hotel_DB]
+GO
+
+/****** Object:  Table [dbo].[tbl_Billing]    Script Date: 06-08-2026 03:08:16 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_Billing](
+	[BillID] [int] IDENTITY(1,1) NOT NULL,
+	[BillCode] [varchar](50) NULL,
+	[OrderID] [int] NULL,
+	[BillDate] [datetime] NULL,
+	[CheckInDate] [datetime] NULL,
+	[CheckOutDate] [datetime] NULL,
+	[TotalDays] [int] NULL,
+	[BillingStatus] [varchar](50) NULL,
+	[TotalAmount] [int] NULL,
+	[PaymentIntrument] [varchar](50) NULL,
+	[TransactionNo] [varchar](50) NULL,
+	[TransactionDate] [datetime] NULL,
+ CONSTRAINT [PK_tbl_Billing] PRIMARY KEY CLUSTERED 
+(
+	[BillID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+```
+
+### 🆕 Insert the data in the Table 
+
+```sql
+
+INSERT INTO tbl_Billing
+(
+BillCode,OrderID,BillDate,CheckInDate,CheckOutDate,TotalDays,BillingStatus,TotalAmount,PaymentIntrument,TransactionNo,
+TransactionDate)
+VALUES
+('BILL001',1,GETDATE()+2,GETDATE()-2,GETDATE()+2,3,'Active',8500.00,'UPI','TXN100001',GETDATE()+2),
+('BILL002',2,GETDATE()+4,GETDATE()-2,GETDATE()+4,2,'Active',6200.00,'Cash','TXN100002',GETDATE()+4),
+('BILL003',3,GETDATE()+1,GETDATE()-1,GETDATE()+1,3,'Active',9800.00,'Card','TXN100003',GETDATE()+1),
+('BILL004',4,GETDATE()+3,GETDATE(),GETDATE()+3,3,'Cancelled',0.00,'Cheque','TXN100004',GETDATE()+3),
+('BILL005',5,GETDATE()+4,GETDATE()-2,GETDATE()+4,2,'Active',7500.00,'NEFT','TXN100005',GETDATE()+4),
+('BILL006',6,GETDATE(),GETDATE()-2,GETDATE(),2,'Active',5600.00,'UPI','TXN100006',GETDATE()),
+('BILL007',7,GETDATE(),GETDATE()-3,GETDATE(),4,'Active',14200.00,'Card','TXN100007',GETDATE()),
+('BILL008',8,GETDATE()+3,GETDATE()-2,GETDATE()+3,4,'Active',13500.00,'Cash','TXN100008',GETDATE()+3),
+('BILL009',9,GETDATE(),GETDATE()-1,GETDATE(),3,'Cancelled',0.00,'Cheque','TXN100009',GETDATE()),
+('BILL010',10,GETDATE()+2,GETDATE()-3,GETDATE()+2,4,'Active',16800.00,'UPI','TXN100010',GETDATE()+2),
+('BILL011',11,GETDATE(),GETDATE(),GETDATE(),3,'Active',8900.00,'Card','TXN100011',GETDATE()),
+('BILL012',12,GETDATE(),GETDATE(),GETDATE(),3,'Active',10200.00,'NEFT','TXN100012',GETDATE()),
+('BILL013',13,GETDATE(),GETDATE()-5,GETDATE(),4,'Active',14900.00,'Cash','TXN100013',GETDATE()),
+('BILL014',14,GETDATE(),GETDATE()-2,GETDATE(),3,'Active',9600.00,'UPI','TXN100014',GETDATE()),
+('BILL015',15,GETDATE(),GETDATE()-4,GETDATE(),4,'Cancelled',0.00,'Cheque','TXN100015',GETDATE()),
+('BILL016',16,GETDATE(),GETDATE()-1,GETDATE(),3,'Active',11200.00,'Card','TXN100016',GETDATE()),
+('BILL017',17,GETDATE(),GETDATE(),GETDATE(),3,'Active',9400.00,'NEFT','TXN100017',GETDATE()),
+('BILL018',18,GETDATE()-1,GETDATE()-3,GETDATE()-1,4,'Active',17500.00,'UPI','TXN100018',GETDATE()-1),
+('BILL019',19,GETDATE(),GETDATE()-2,GETDATE(),3,'Active',8800.00,'Cash','TXN100019',GETDATE()),
+('BILL020',20,GETDATE(),GETDATE()-1,GETDATE(),4,'Active',19400.00,'Card','TXN100020',GETDATE())
+
+```
+
+### 🆕 Verify Table Creation  
+
+```sql
+
+select * from tbl_Billing
+
+```
+<img width="1287" height="458" alt="image" src="https://github.com/user-attachments/assets/a58f2550-b633-4301-98e6-df7b032072ea" />
+
+<br clear="both">
+
+> ✅ **Result:** The `tbl_Billing` table is successfully created and ready for the next step.
+
+ 
+### 🆕 Create table for tbl_Salary 
+
+```sql
+
+USE [Hotel_DB]
+GO
+
+/****** Object:  Table [dbo].[tbl_Salary]    Script Date: 06-08-2026 03:12:58 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_Salary](
+	[SalaryID] [int] IDENTITY(1,1) NOT NULL,
+	[SalaryCode] [varchar](50) NULL,
+	[EmployeeID] [int] NULL,
+	[SalaryMonth] [varchar](20) NULL,
+	[BasicSalary] [int] NULL,
+	[Bonus] [varchar](200) NULL,
+	[OvertimeAmount] [int] NULL,
+	[NetSalary] [int] NULL,
+	[PaymentIntrument] [varchar](100) NULL,
+	[BankName] [varchar](200) NULL,
+	[AccountNumber] [varchar](50) NULL,
+	[IFSCCode] [varchar](50) NULL,
+	[SalarytDate] [datetime] NULL,
+	[SalaryStatus] [varchar](50) NULL,
+	[CreatedDate] [datetime] NULL,
+ CONSTRAINT [PK_tbl_Salary] PRIMARY KEY CLUSTERED 
+(
+	[SalaryID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+```
+
+### 🆕 Insert the data in the Table 
+
+```sql
+
+INSERT INTO tbl_Salary
+(SalaryCode,EmployeeID,SalaryMonth,BasicSalary,Bonus,OvertimeAmount,NetSalary,PaymentIntrument,BankName,AccountNumber,
+IFSCCode,SalarytDate,SalaryStatus)
+VALUES
+('SAL001',1,'January-2026',30000,3000,1500,34500,'Net Banking','State Bank of India','123456789001','SBIN0001001',GETDATE(),'Paid'),
+('SAL002',2,'January-2026',32000,2500,1200,35700,'Net Banking','HDFC Bank','123456789002','HDFC0001002',GETDATE(),'Paid'),
+('SAL003',3,'January-2026',35000,4000,1800,40800,'Net Banking','ICICI Bank','123456789003','ICIC0001003',GETDATE(),'Paid'),
+('SAL004',4,'January-2026',28000,2000,800,30800,'Net Banking','Axis Bank','123456789004','UTIB0001004',GETDATE(),'Paid'),
+('SAL005',5,'January-2026',45000,5000,2500,52500,'Net Banking','Bank of Baroda','123456789005','BARB0001005',GETDATE(),'Paid'),
+('SAL006',6,'February-2026',30000,2500,1200,33700,'Net Banking','Punjab National Bank','123456789006','PUNB0001006',GETDATE(),'Paid'),
+('SAL007',7,'February-2026',36000,3500,1500,41000,'Net Banking','Canara Bank','123456789007','CNRB0001007',GETDATE(),'Paid'),
+('SAL008',8,'February-2026',42000,4000,2000,48000,'Net Banking','Union Bank','123456789008','UBIN0001008',GETDATE(),'Paid'),
+('SAL009',9,'February-2026',28000,1500,1000,30500,'Net Banking','Indian Bank','123456789009','IDIB0001009',GETDATE()+10,'Pending'),
+('SAL010',10,'February-2026',39000,3000,1800,43800,'Net Banking','Bank of India','123456789010','BKID0001010',GETDATE(),'Paid'),
+('SAL011',11,'March-2026',41000,4500,2000,47500,'Net Banking','Kotak Mahindra Bank','123456789011','KKBK0001011',GETDATE(),'Paid'),
+('SAL012',12,'March-2026',29000,2000,700,31700,'Net Banking','Yes Bank','123456789012','YESB0001012',GETDATE(),'Hold'),
+('SAL013',13,'March-2026',33000,2500,1500,37000,'Net Banking','IndusInd Bank','123456789013','INDB0001013',GETDATE(),'Paid'),
+('SAL014',14,'March-2026',50000,6000,3000,59000,'Net Banking','HDFC Bank','123456789014','HDFC0001014',GETDATE()+2,'Paid'),
+('SAL015',15,'April-2026',27000,1500,600,29100,'Net Banking','ICICI Bank','123456789015','ICIC0001015',GETDATE(),'Pending'),
+('SAL016',16,'April-2026',38000,3500,2000,43500,'Net Banking','Axis Bank','123456789016','UTIB0001016',GETDATE(),'Paid'),
+('SAL017',17,'April-2026',34000,2500,1200,37700,'Net Banking','State Bank of India','123456789017','SBIN0001017',GETDATE()+7,'Paid'),
+('SAL018',18,'April-2026',46000,5000,2200,53200,'Net Banking','Bank of Baroda','123456789018','BARB0001018',GETDATE(),'Paid'),
+('SAL019',19,'May-2026',31000,2200,900,34100,'Net Banking','Punjab National Bank','123456789019','PUNB0001019',GETDATE()+15,'Hold'),
+('SAL020',20,'May-2026',55000,7000,3500,65500,'Net Banking','ICICI Bank','123456789020','ICIC0001020',GETDATE(),'Paid');
+
+```
+
+### 🆕 Verify Table Creation  
+
+```sql
+
+select * from tbl_Salary
+
+```
+<img width="1360" height="450" alt="image" src="https://github.com/user-attachments/assets/cd9294cd-62db-4790-8049-c8f9b10613c5" />
+
+<br clear="both">
+
+> ✅ **Result:** The `tbl_Salary` table is successfully created and ready for the next step.
  
 
 
