@@ -205,6 +205,55 @@ select * from tbl_Employee
  
 </div>
 
+### 🆕 Create table for   
+
+```sql
+
+USE [Hotel_DB]
+GO
+
+/****** Object:  Table [dbo].[tbl_Customer]    Script Date: 06-08-2026 02:18:06 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_Customer](
+	[CustomerID] [int] IDENTITY(1,1) NOT NULL,
+	[CustomerCode] [varchar](10) NULL,
+	[CustomerName] [varchar](50) NULL,
+	[Gender] [varchar](10) NULL,
+	[DateOfBirth] [date] NULL,
+	[MaritalStatus] [varchar](15) NULL,
+	[MobileNo] [varchar](15) NULL,
+	[EmailID] [varchar](100) NULL,
+	[Address] [varchar](200) NULL,
+	[City] [varchar](50) NULL,
+	[State] [varchar](50) NULL,
+	[Country] [varchar](50) NULL,
+	[Nationality] [varchar](50) NULL,
+	[IDProofType] [varchar](20) NULL,
+	[IDProofNumber] [varchar](30) NULL,
+	[MembershipType] [varchar](20) NULL,
+	[RegistrationDate] [datetime] NULL,
+	[PreferredRoomType] [varchar](20) NULL,
+	[CheckInDateTime] [datetime] NULL,
+	[CheckOutDateTime] [datetime] NULL,
+	[PackageID] [int] NULL,
+	[Status] [varchar](20) NULL,
+ CONSTRAINT [PK_tbl_Customer] PRIMARY KEY CLUSTERED 
+(
+	[CustomerID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+```
+
+
+
 
 
 
