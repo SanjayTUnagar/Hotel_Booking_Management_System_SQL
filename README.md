@@ -212,7 +212,7 @@ select * from tbl_Employee
 USE [Hotel_DB]
 GO
 
-/****** Object:  Table [dbo].[tbl_Customer]    Script Date: 06-08-2026 02:18:06 ******/
+/****** Object:  Table [dbo].[tbl_Customer]   ******/
 SET ANSI_NULLS ON
 GO
 
@@ -308,14 +308,94 @@ select * from tbl_Customer
 
 ```
 
-<br clear="both">
-
 <img width="1877" height="456" alt="image" src="https://github.com/user-attachments/assets/c964ceac-ae2b-42b0-aec9-2617384ed381" />
 
 <br clear="both">
 
-> ✅ **Result:** The `tbl_Employee` table is successfully created and ready for the next step.
+> ✅ **Result:** The `tbl_Customer` table is successfully created and ready for the next step.
  
+
+### 🆕 Create table for tbl_Orders  
+
+```sql
+
+USE [Hotel_DB]
+GO
+
+/****** Object:  Table [dbo].[tbl_Orders]  ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[tbl_Orders](
+	[OrderID] [int] IDENTITY(1,1) NOT NULL,
+	[OrderCode] [varchar](50) NULL,
+	[BookingID] [int] NULL,
+	[CustomerID] [int] NULL,
+	[PackageID] [int] NULL,
+	[MenuID] [int] NULL,
+	[OrderDate] [datetime] NULL,
+	[Quantity] [int] NULL,
+	[TotalAmount] [int] NULL,
+	[OrderStatus] [varchar](50) NULL,
+	[PaymentMode] [varchar](50) NULL,
+ CONSTRAINT [PK_tbl_Orders] PRIMARY KEY CLUSTERED 
+(
+	[OrderID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
+```
+
+### 🆕 Insert the data in the Table 
+
+```sql
+insert into tbl_Orders 
+(OrderCode, BookingID, CustomerID, PackageID, MenuID, OrderDate, Quantity, TotalAmount, OrderStatus, PaymentMode)
+values
+--('ORD001', 1, 1, 1, 1, '2026-07-01 08:30:00', 2, 450.00, 'Delivered', 'Cash'),
+('ORD002', 2, 2, 2, 3, GETDATE()-5, 1, 350.00, 'Delivered', 'Online'),
+('ORD003', 3, 3, 1, 5, GETDATE()-2, 3, 900.00, 'Preparing', 'Cash'),
+('ORD004', 4, 4, 3, 2, GETDATE()-10, 2, 600.00, 'Pending', 'Online'),
+('ORD005', 5, 5, 2, 6, GETDATE()-12, 1, 280.00, 'Delivered', 'Cash'),
+('ORD006', 6, 6, 1, 4, GETDATE()-3, 2, 720.00, 'Cancelled', 'Online'),
+('ORD007', 7, 7, 4, 8, GETDATE()-4, 4, 1200.00, 'Delivered', 'Cash'),
+('ORD008', 8, 8, 3, 7, GETDATE()-15, 2, 540.00, 'Preparing', 'Online'),
+('ORD009', 9, 9, 2, 9, GETDATE()-10, 3, 960.00, 'Delivered', 'Cash'),
+('ORD010', 10, 10, 5, 10, GETDATE()-1, 2, 650.00, 'Pending', 'Online'),
+('ORD011', 11, 11, 1, 11, GETDATE(), 1, 300.00, 'Delivered', 'Cash'),
+('ORD012', 12, 12, 4, 12, GETDATE()-3, 5, 1750.00, 'Preparing', 'Online'),
+('ORD013', 13, 13, 3, 13, GETDATE()-1, 2, 580.00, 'Delivered', 'Cash'),
+('ORD014', 14, 14, 2, 14, GETDATE()-20, 1, 320.00, 'Cancelled', 'Cash'),
+('ORD015', 15, 15, 5, 15, GETDATE()-14, 3, 990.00, 'Delivered', 'Online'),
+('ORD016', 16, 16, 1, 16, GETDATE()-5, 2, 740.00, 'Preparing', 'Cash'),
+('ORD017', 17, 17, 4, 17, GETDATE()-8, 4, 1400.00, 'Delivered', 'Online'),
+('ORD018', 18, 18, 3, 18, GETDATE()-2, 2, 680.00, 'Pending', 'Cash'),
+('ORD019', 19, 19, 2, 19, GETDATE()-1, 1, 260.00, 'Delivered', 'Online'),
+('ORD020', 20, 20, 5, 20, GETDATE(), 3, 1050.00, 'Delivered', 'Cash');
+
+```
+
+### 🆕 Verify Table Creation  
+
+```sql
+
+select * from tbl_Orders
+
+```
+<img width="947" height="457" alt="image" src="https://github.com/user-attachments/assets/fb83a7f1-ea7d-4c8f-b54a-4ee6a4c427f8" />
+
+<br clear="both">
+
+> ✅ **Result:** The `tbl_Orders` table is successfully created and ready for the next step.
+ 
+
 
 
 
